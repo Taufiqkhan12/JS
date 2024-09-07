@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #0d0d0d; color: #f4f4f4">
+    <script>
+      //   const div = document.createElement("div");
+      //   div.className = "first";
+      //   //   div.textContent = "Hello";
+      //   div.setAttribute("title", "generated title");
+      //   div.style.backgroundColor = "green";
+      //   div.style.padding = "10px";
+      //   const addText = document.createTextNode("Taufiq");
+      //   div.appendChild(addText);
+      //   document.body.appendChild(div);
+      //   console.log(div);
+
+      function createDiv(classname, divtext, bgcolor, textcolor, marginy) {
+        const div = document.createElement("div");
+        div.className = classname;
+        const addText = document.createTextNode(divtext);
+        div.appendChild(addText);
+        div.style.backgroundColor = bgcolor;
+        div.style.color = textcolor;
+        div.style.margin = "1rem 0";
+        document.body.appendChild(div);
+        return;
+      }
+
+      const bgColor = ["green", "white", "brown", "blue"];
+      const textcolor = ["black", "blue", "beige", "white"];
+
+      for (let i = 0; i < bgColor.length; i++) {
+        createDiv("taufiq", "Taufiq Khan", bgColor[i], textcolor[i]);
+      }
+    </script>
+  </body>
+</html>
